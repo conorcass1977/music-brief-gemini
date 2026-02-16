@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     
 
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-pro",  // ← Just use this, no -latest
+      model: "gemini-pro",  // ← Just use this, no -latest
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: max_tokens || 4000,

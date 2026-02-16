@@ -7,8 +7,9 @@ export async function POST(req: Request) {
   try {
     const { messages, max_tokens } = await req.json();
     
+
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.0-flash-exp",
+      model: "gemini-1.5-pro-latest",  // ← Change this line
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: max_tokens || 4000,
